@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lintstagram</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">tqsXYxtSmrFpnOZCWDeFsLNNq5BLi49x0M1WAgm4</string>
+    <string name="back4app_client_key">rf0BBiSX09bnUw47pTiVmkKXyhgNKIU4QVcLLB5d</string>
+</resources>
