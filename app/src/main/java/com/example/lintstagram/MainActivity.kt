@@ -13,6 +13,8 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.content.FileProvider
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.parse.*
 import java.io.File
 
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             val user = ParseUser.getCurrentUser()
             if (photoFile != null) {
             submitPost(description, user, photoFile!!)
-            Toast.makeText(this, "Successfully posted!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Successfully posted!000", Toast.LENGTH_SHORT).show()
             } else {
                 //
 //                Log.e(TAG, "Couldn't submit properly")
@@ -49,6 +51,26 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnCaptureImage).setOnClickListener {
             // Launch the camera to let the user take a picture
             onLaunchCamera()
+        }
+
+        findViewById<BottomNavigationView>(R.id.bottom_navigation).setOnItemSelectedListener {
+            item -> // Creates a variable called 'item'
+            when (item.itemId) {
+                R.id.action_home -> {
+                    // Navigate to the home screen
+                    Toast.makeText(this, "Home!", Toast.LENGTH_LONG).show()
+                }
+                R.id.action_compose -> {
+                    //
+                    Toast.makeText(this, "Compose!", Toast.LENGTH_LONG).show()
+                }
+                R.id.action_profile -> {
+                    Toast.makeText(this, "Profile!", Toast.LENGTH_LONG).show()
+                }
+            }
+            // Return true to signal that we've handled the user interaction on the item
+            true
+
         }
 
         queryPosts()
