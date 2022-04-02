@@ -58,7 +58,7 @@ class ComposeFragment : Fragment() {
             val user = ParseUser.getCurrentUser()
             if (photoFile != null) {
                 submitPost(description, user, photoFile!!)
-                Toast.makeText(requireContext(), "Successfully posted!000", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Successfully posted!", Toast.LENGTH_SHORT).show()
             } else {
                 //
 //                Log.e(TAG, "Couldn't submit properly")

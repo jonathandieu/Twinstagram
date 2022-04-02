@@ -26,7 +26,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [FeedFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FeedFragment : Fragment() {
+open class FeedFragment : Fragment() {
 
     lateinit var postsRecyclerView: RecyclerView
 
@@ -60,7 +60,7 @@ class FeedFragment : Fragment() {
         queryPosts()
     }
     // Make the query to get all posts in our server
-    fun queryPosts() {
+    open fun queryPosts() {
 
         // Specify which class to query
         val query: ParseQuery<Post> = ParseQuery.getQuery(Post::class.java)

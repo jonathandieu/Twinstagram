@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.lintstagram.fragments.ComposeFragment
 import com.example.lintstagram.fragments.FeedFragment
+import com.example.lintstagram.fragments.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.parse.*
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.action_home -> {
                     // Navigate to the home screen
                     fragmentToShow = FeedFragment()
-                    Toast.makeText(this, "Home!", Toast.LENGTH_LONG).show()
+//                    Toast.makeText(this, "Home!", Toast.LENGTH_LONG).show()
                 }
                 R.id.action_compose -> {
                     // Show compose
@@ -48,7 +49,8 @@ class MainActivity : AppCompatActivity() {
 //                    Toast.makeText(this, "Compose!", Toast.LENGTH_LONG).show()
                 }
                 R.id.action_profile -> {
-                    Toast.makeText(this, "Profile!", Toast.LENGTH_LONG).show()
+                    fragmentToShow = ProfileFragment()
+//                    Toast.makeText(this, "Profile!", Toast.LENGTH_LONG).show()
                 }
             }
 
